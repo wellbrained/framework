@@ -103,7 +103,8 @@ export default defineNuxtConfig({
     }
   },
   experimental: {
-    inlineSSRStyles: id => !!id && !id.includes('assets.vue'),
+    // TODO: Could not resolve "./error-500-styles-1.mjs-!~{004}~.js" from ".nuxt/dist/server/_nuxt/error-500-styles.8cad04bf.mjs"
+    inlineSSRStyles: false, // id => !!id && !id.includes('assets.vue'),
     reactivityTransform: true,
     treeshakeClientOnly: true,
     payloadExtraction: true
